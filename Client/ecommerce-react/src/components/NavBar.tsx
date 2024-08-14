@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Box } from "@mui/material";
-import logo from "../../assets/images/logo.png";
+import logo from "../assets/images/logo.png";
 
 export function NavBar() {
   return (
