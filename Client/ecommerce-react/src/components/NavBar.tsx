@@ -4,22 +4,21 @@ import Typography from "@mui/material/Typography";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Box } from "@mui/material";
-import logo from "../../assets/images/logo.png";
+import logo from "../assets/images/logo.png";
 
 export function NavBar() {
   return (
     <AppBar
       position="static"
       sx={{ backgroundColor: "white", boxShadow: 1, width: "100%" }}
+      className="shadow-sm px-5"
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+        <Box
+          sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}
+        >
           <img src={logo} alt="logo" width={80} height={80} />
-          <Typography
-            variant="h5"
-            color="#303030"
-            sx={{ fontWeight: "600" }}
-          >
+          <Typography variant="h5" color="#303030" sx={{ fontWeight: "600" }}>
             ShopSphere
           </Typography>
         </Box>
