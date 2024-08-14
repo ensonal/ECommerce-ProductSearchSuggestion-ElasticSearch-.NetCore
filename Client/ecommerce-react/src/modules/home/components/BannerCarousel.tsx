@@ -37,7 +37,6 @@ export function BannerCarousel() {
         alt={`Image ${activeImageIndex + 1}`}
         sx={{
           width: "100%",
-          maxWidth: "1280px",
           height: "auto",
           maxHeight: "375px",
           objectFit: "cover",
