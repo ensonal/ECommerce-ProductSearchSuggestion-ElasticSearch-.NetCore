@@ -59,7 +59,7 @@ export function BannerCarousel() {
               backgroundColor:
                 index === activeImageIndex
                   ? "rgba(0, 0, 0, 0.5)"
-                  : "rgba(235, 235, 235, 0.7)",
+                  : "rgba(250, 250, 250, 0.5)",
               color: "white",
               boxShadow: "0 1px 5px rgba(0, 0, 0, 0.4)",
               backdropFilter: "blur(5px)",
