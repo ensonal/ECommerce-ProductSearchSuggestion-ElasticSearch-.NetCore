@@ -1,8 +1,11 @@
 import { Box, Typography } from "@mui/material";
-import productImage from "../../assets/images/temp-product/product.png";
+import productImage from "../../../assets/images/temp-product/product.png";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarHalfIcon from "@mui/icons-material/StarHalf";
+import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
+import AddShoppingCartRoundedIcon from "@mui/icons-material/AddShoppingCartRounded";
+import "./SmallProductCard.css";
 
 type SmallProductCardProps = {
   isFlashDeal?: boolean;
@@ -109,6 +112,16 @@ export function SmallProductCard({
           ) : (
             "$200"
           )}
+        </Box>
+      </Box>
+      <Box className="d-flex flex-row gap-2 justify-content-end">
+        <Box className="icon-container" sx={{ cursor: "pointer" }}>
+          <FavoriteBorderRoundedIcon fontSize="small" color="action" />
+          <Typography className="icon-text">Add to Favorites</Typography>
+        </Box>
+        <Box className="icon-container" sx={{ cursor: "pointer" }}>
+          <Typography className="icon-text">Add to Cart</Typography>
+          <AddShoppingCartRoundedIcon fontSize="small" color="action" />
         </Box>
       </Box>
     </Box>

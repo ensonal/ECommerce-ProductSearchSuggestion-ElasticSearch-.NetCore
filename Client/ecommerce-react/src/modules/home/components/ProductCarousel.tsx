@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Box, IconButton, Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import { SmallProductCard } from "../../../components/product/SmallProductCard";
+import { SmallProductCard } from "../../../components/product/SmallProductCard/SmallProductCard";
 
 type ProductCarouselProps = {
   isFlashDeal: boolean;
