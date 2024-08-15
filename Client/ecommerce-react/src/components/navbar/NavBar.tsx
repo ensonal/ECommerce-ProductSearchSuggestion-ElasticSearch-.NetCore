@@ -31,11 +31,8 @@ export function NavBar() {
         <NavCenterActions />
         <Box className="d-flex flex-row gap-2">
           <Box
-            className="d-flex flex-row gap-1 rounded-3 p-1 px-2"
+            className="d-flex flex-row gap-1 rounded-3 py-1 px-2 shadow-sm"
             sx={{
-              borderColor: "#303030",
-              borderWidth: 1,
-              borderStyle: "solid",
               justifyContent: "center",
               alignItems: "center",
             }}
@@ -53,11 +50,8 @@ export function NavBar() {
             </Typography>
           </Box>
           <Box
-            className="d-flex flex-row gap-1 rounded-3 p-1 px-2"
+            className="d-flex flex-row gap-1 rounded-3 py-1 px-2 shadow-sm"
             sx={{
-              borderColor: "#303030",
-              borderWidth: 1,
-              borderStyle: "solid",
               justifyContent: "center",
               alignItems: "center",
             }}
