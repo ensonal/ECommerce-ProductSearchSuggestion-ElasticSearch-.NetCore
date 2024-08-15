@@ -4,7 +4,8 @@ import Typography from "@mui/material/Typography";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Box } from "@mui/material";
-import logo from "../assets/images/logo.png";
+import logo from "../../assets/images/logo.png";
+import { NavCenterActions } from "./NavCenterActions";
 
 export function NavBar() {
   return (
@@ -15,51 +16,23 @@ export function NavBar() {
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box
-          sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
           <img src={logo} alt="logo" width={80} height={80} />
           <Typography variant="h5" color="#303030" sx={{ fontWeight: "600" }}>
             ShopSphere
           </Typography>
         </Box>
-
-        <Box sx={{ display: "flex", gap: 2 }}>
-          <Typography
-            variant="subtitle1"
-            color="#303030"
-            sx={{ fontWeight: "600" }}
-          >
-            Categories
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            color="#303030"
-            sx={{ fontWeight: "600" }}
-          >
-            Deals
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            color="#303030"
-            sx={{ fontWeight: "600" }}
-          >
-            What's New
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            color="#303030"
-            sx={{ fontWeight: "600" }}
-          >
-            Delivery
-          </Typography>
-        </Box>
+        <NavCenterActions />
         <Box className="d-flex flex-row gap-2">
           <Box
-            className="d-flex flex-row gap-1 rounded-3 p-1 px-2"
+            className="d-flex flex-row gap-1 rounded-3 py-1 px-2 shadow-sm"
             sx={{
-              borderColor: "#303030",
-              borderWidth: 1,
-              borderStyle: "solid",
               justifyContent: "center",
               alignItems: "center",
             }}
@@ -77,11 +50,8 @@ export function NavBar() {
             </Typography>
           </Box>
           <Box
-            className="d-flex flex-row gap-1 rounded-3 p-1 px-2"
+            className="d-flex flex-row gap-1 rounded-3 py-1 px-2 shadow-sm"
             sx={{
-              borderColor: "#303030",
-              borderWidth: 1,
-              borderStyle: "solid",
               justifyContent: "center",
               alignItems: "center",
             }}
