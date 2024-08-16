@@ -3,12 +3,11 @@ import { Box, IconButton, Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { SmallProductCard } from "../../../components/product/SmallProductCard/SmallProductCard";
+import { useProducts } from "../../../modules/products/hooks/useProducts";
 
-type ProductCarouselProps = {
-  isFlashDeal: boolean;
-};
+export function ProductCarousel() {
+  const { products, loading } = useProducts();
 
-export function ProductCarousel({ isFlashDeal }: ProductCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleProducts = 5;
 
@@ -26,18 +25,18 @@ export function ProductCarousel({ isFlashDeal }: ProductCarouselProps) {
 
   return (
     <Box position="relative">
-      <Box className="d-flex flex-row justify-content-between align-items-center mb-3">
+      <Box className="d-flex flex-row justify-content-between align-items-center mb-2">
         <Typography
           gutterBottom
-          fontSize={24}
+          fontSize={"1.25rem"}
           fontWeight={600}
           color={"#505050"}
           margin={0}
-          children={isFlashDeal ? "Flash Deals" : "Best Sellers"}
+          children={"Best Sellers"}
         />
         <Typography
           gutterBottom
-          fontSize={16}
+          fontSize={"0.875rem"}
           fontWeight={600}
           color={"#F91F35"}
           margin={0}
@@ -74,9 +73,9 @@ export function ProductCarousel({ isFlashDeal }: ProductCarouselProps) {
             }}
           >
             <Box className="d-flex flex-row gap-4">
-              {Array.from({ length: 10 }, (_, index) => (
+              {products.slice(0, 10).map((product, index) => (
                 <Box key={index}>
-                  <SmallProductCard isFlashDeal={isFlashDeal} />
+                  <SmallProductCard product={product} loading={loading} />
                 </Box>
               ))}
             </Box>
