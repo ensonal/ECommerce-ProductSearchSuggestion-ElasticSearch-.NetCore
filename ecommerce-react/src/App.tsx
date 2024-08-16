@@ -2,7 +2,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Routes } from "./routes/Routes";
 import "./App.css";
 import { NavBar } from "./components/navbar/NavBar";
-import ApolloAppProvider from "./api/ApolloProvider";
+import ApolloAppProvider from "./provider/ApolloProvider";
 
 function App() {
   return (
