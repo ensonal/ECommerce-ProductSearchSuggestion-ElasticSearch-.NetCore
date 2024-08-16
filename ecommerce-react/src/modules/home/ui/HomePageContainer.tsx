@@ -8,8 +8,7 @@ export function HomePageContainer() {
       <Stack spacing={5}>
         <BannerCarousel />
         <Stack spacing={3}>
-          <ProductCarousel isFlashDeal={true} />
-          <ProductCarousel isFlashDeal={false} />
+          <ProductCarousel />
         </Stack>
       </Stack>
     </Container>

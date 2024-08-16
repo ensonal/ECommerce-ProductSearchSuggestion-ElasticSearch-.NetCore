@@ -1,4 +1,3 @@
-import { CircularProgress } from "@mui/material";
 import { lazy, Suspense } from "react";
 import { Navigate, Routes as ReactRouterRoutes, Route } from "react-router-dom";
 
@@ -18,7 +17,7 @@ export function Routes() {
             key={path}
             path={path}
             element={
-              <Suspense fallback={<CircularProgress size={80} />}>
+              <Suspense>
                 <Component />
               </Suspense>
             }

@@ -16,4 +16,7 @@ export class Product {
 
   @Column({ nullable: false })
   imageUrl: string;
+
+  @Column({ nullable: true })
+  rating: string;
 }
