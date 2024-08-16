@@ -52,22 +52,27 @@ export function BannerCarousel() {
       >
         {bannerImages.map((image, index) => (
           <Button
-            key={index}
-            size="small"
-            onClick={() => handleSelectImage(index)}
-            sx={{
-              backgroundColor:
-                index === activeImageIndex
-                  ? "rgba(0, 0, 0, 0.5)"
-                  : "rgba(250, 250, 250, 0.5)",
-              color: "white",
-              boxShadow: "0 1px 5px rgba(0, 0, 0, 0.4)",
-              backdropFilter: "blur(5px)",
-              "&:hover": {
-                backgroundColor: "rgba(0, 0, 0, 0.7)",
-              },
-            }}
-          />
+          key={index}
+          size="small"
+          onClick={() => handleSelectImage(index)}
+          sx={{
+            width: "2.5rem",
+            height: "0.5rem",
+            minWidth: "2.5rem", 
+            minHeight: "0.5rem", 
+            backgroundColor:
+              index === activeImageIndex
+                ? "rgba(0, 0, 0, 0.5)"
+                : "rgba(250, 250, 250, 0.5)",
+            color: "white",
+            boxShadow: "0 1px 5px rgba(0, 0, 0, 0.4)",
+            backdropFilter: "blur(5px)",
+            "&:hover": {
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
+            },
+          }}
+        />
+        
         ))}
       </Box>
     </Box>
