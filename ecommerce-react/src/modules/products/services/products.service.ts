@@ -1,12 +1,14 @@
-import { Product } from "../models/api-model/product";
-import axiosClient from "../../../api/apiClient";
+import { gql } from '@apollo/client';
 
-
-export const getProducts = async (): Promise<Product[]> => {
-    try {
-        const response = await axiosClient.get<Product[]>('/products');
-        return response.data;
-    } catch (error) {
-        throw error;
+export const GET_PRODUCTS_QUERY = gql`
+  query GetProducts {
+    getProducts {
+      id
+      name
+      price
+      imageUrl
+      description
+      rating
     }
-};
+  }
+`;
