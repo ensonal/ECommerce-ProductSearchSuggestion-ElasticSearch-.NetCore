@@ -1,26 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useQuery } from '@apollo/client';
 import { Product } from '../models/api-model/product';
-import { getProducts } from '../services/products.service';
+import { GET_PRODUCTS_QUERY } from '../services/products.service';
 
 export const useProducts = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const { data, loading, error } = useQuery<{ getProducts: Product[] }>(GET_PRODUCTS_QUERY);
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const data = await getProducts();
-        setProducts(data);
-      } catch (err) {
-        setError('Failed to fetch products');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
-  return { products, loading, error };
+  return {
+    products: data?.getProducts || [],
+    loading,
+    error: error ? error.message : null,
+  };
 };
