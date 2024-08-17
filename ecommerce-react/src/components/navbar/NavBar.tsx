@@ -43,17 +43,26 @@ export function NavBar() {
             className="d-flex flex-row gap-3 justify-content-end"
             sx={{ width: "20%" }}
           >
-            <Box
-              className="d-flex flex-row gap-1 rounded-3 py-1 px-2"
+            <Button
+              size="medium"
               sx={{
-                justifyContent: "center",
-                alignItems: "center",
+                color: "#333333",
+                fontWeight: "bolder",
+                textTransform: "none",
+                "&:hover": {
+                  "& .MuiSvgIcon-root, & .MuiTypography-root": {
+                    color: "#E81E1E",
+                    transition: "color 0.3s ease",
+                  },
+                },
               }}
+              startIcon={
+                <ShoppingCartOutlinedIcon
+                  fontSize="medium"
+                  sx={{ color: "#333333" }}
+                />
+              }
             >
-              <ShoppingCartOutlinedIcon
-                fontSize="medium"
-                sx={{ color: "#333333" }}
-              />
               <Typography
                 color="#333333"
                 fontSize={"0.875rem"}
@@ -61,15 +70,24 @@ export function NavBar() {
               >
                 Cart
               </Typography>
-            </Box>
-            <Box
-              className="d-flex flex-row gap-1 rounded-3 py-1 px-2"
+            </Button>
+            <Button
+              size="medium"
               sx={{
-                justifyContent: "center",
-                alignItems: "center",
+                color: "#333333",
+                fontWeight: "bolder",
+                textTransform: "none",
+                "&:hover": {
+                  "& .MuiSvgIcon-root, & .MuiTypography-root": {
+                    color: "#E81E1E",
+                    transition: "color 0.3s ease",
+                  },
+                },
               }}
+              startIcon={
+                <PermIdentityIcon fontSize="medium" sx={{ color: "#333333" }} />
+              }
             >
-              <PermIdentityIcon fontSize="medium" sx={{ color: "#333333" }} />
               <Typography
                 color="#333333"
                 fontSize={"0.875rem"}
@@ -77,7 +95,7 @@ export function NavBar() {
               >
                 Account
               </Typography>
-            </Box>
+            </Button>
           </Box>
         </Toolbar>
         <div className="d-flex flex-row gap-3 justify-content-start align-items-center">
