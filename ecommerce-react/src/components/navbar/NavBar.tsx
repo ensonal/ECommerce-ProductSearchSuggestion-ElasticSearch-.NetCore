@@ -3,70 +3,178 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { Box } from "@mui/material";
+import { Box, Button, Container, Divider } from "@mui/material";
 import logo from "../../assets/images/logo.png";
 import { NavCenterActions } from "./NavCenterActions";
+import BorderAllRoundedIcon from "@mui/icons-material/BorderAllRounded";
 
 export function NavBar() {
   return (
     <AppBar
       position="static"
       sx={{ backgroundColor: "white", boxShadow: 1, width: "100%" }}
-      className="shadow-sm px-5"
+      className="shadow-sm"
     >
-      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box
+      <Container maxWidth="lg">
+        <Toolbar
           sx={{
             display: "flex",
+            justifyContent: "space-between",
             flexDirection: "row",
             alignItems: "center",
-            justifyContent: "center",
+            justifyItems: "center",
           }}
+          className="p-0"
         >
-          <img src={logo} alt="logo" width={80} height={80} />
-          <Typography variant="h5" color="#303030" sx={{ fontWeight: "600" }}>
-            ShopSphere
-          </Typography>
-        </Box>
-        <NavCenterActions />
-        <Box className="d-flex flex-row gap-2">
           <Box
-            className="d-flex flex-row gap-1 rounded-3 py-1 px-2 shadow-sm"
             sx={{
-              justifyContent: "center",
+              display: "flex",
+              width: "20%",
+              justifyContent: "start",
+              flexDirection: "row",
               alignItems: "center",
             }}
+            className="gap-1"
           >
-            <ShoppingCartOutlinedIcon
-              fontSize="medium"
-              sx={{ color: "#303030" }}
-            />
-            <Typography
-              variant="subtitle1"
-              color="#303030"
-              sx={{ fontWeight: "600" }}
-            >
-              Cart
-            </Typography>
+            <img src={logo} alt="logo" width={40} height={40} />
           </Box>
+          <NavCenterActions />
           <Box
-            className="d-flex flex-row gap-1 rounded-3 py-1 px-2 shadow-sm"
-            sx={{
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+            className="d-flex flex-row gap-3 justify-content-end"
+            sx={{ width: "20%" }}
           >
-            <PermIdentityIcon fontSize="medium" sx={{ color: "#303030" }} />
+            <Button
+              size="medium"
+              sx={{
+                color: "#333333",
+                fontWeight: "bolder",
+                textTransform: "none",
+                "&:hover": {
+                  "& .MuiSvgIcon-root, & .MuiTypography-root": {
+                    color: "#E81E1E",
+                    transition: "color 0.3s ease",
+                  },
+                },
+              }}
+              startIcon={
+                <ShoppingCartOutlinedIcon
+                  fontSize="medium"
+                  sx={{ color: "#333333" }}
+                />
+              }
+            >
+              <Typography
+                color="#333333"
+                fontSize={"0.875rem"}
+                sx={{ fontWeight: "600" }}
+              >
+                Cart
+              </Typography>
+            </Button>
+            <Button
+              size="medium"
+              sx={{
+                color: "#333333",
+                fontWeight: "bolder",
+                textTransform: "none",
+                "&:hover": {
+                  "& .MuiSvgIcon-root, & .MuiTypography-root": {
+                    color: "#E81E1E",
+                    transition: "color 0.3s ease",
+                  },
+                },
+              }}
+              startIcon={
+                <PermIdentityIcon fontSize="medium" sx={{ color: "#333333" }} />
+              }
+            >
+              <Typography
+                color="#333333"
+                fontSize={"0.875rem"}
+                sx={{ fontWeight: "600" }}
+              >
+                Account
+              </Typography>
+            </Button>
+          </Box>
+        </Toolbar>
+        <div className="d-flex flex-row gap-3 justify-content-start align-items-center">
+          <Button
+            size="medium"
+            sx={{
+              color: "#333333",
+              fontWeight: "bolder",
+              textTransform: "none",
+            }}
+            startIcon={<BorderAllRoundedIcon fontSize="small" />}
+          >
+            Categories
+          </Button>
+          <Divider
+            orientation="vertical"
+            variant="middle"
+            sx={{ borderColor: "#333333", width: "3px", height: "1.25rem" }}
+          />
+          <div className="d-flex flex-row gap-4 justify-content-between align-items-center w-100">
             <Typography
-              variant="subtitle1"
-              color="#303030"
+              color="#333333"
+              fontSize={"0.8125rem"}
               sx={{ fontWeight: "600" }}
             >
-              Account
+              Today's Deal
             </Typography>
-          </Box>
-        </Box>
-      </Toolbar>
+            <Typography
+              color="#333333"
+              fontSize={"0.8125rem"}
+              sx={{ fontWeight: "600" }}
+            >
+              Best Sellers
+            </Typography>
+            <Typography
+              color="#333333"
+              fontSize={"0.8125rem"}
+              sx={{ fontWeight: "600" }}
+            >
+              New Arrivals
+            </Typography>
+            <Typography
+              color="#333333"
+              fontSize={"0.8125rem"}
+              sx={{ fontWeight: "600" }}
+            >
+              Seasonal Favorites
+            </Typography>
+            <Typography
+              color="#333333"
+              fontSize={"0.8125rem"}
+              sx={{ fontWeight: "600" }}
+            >
+              Back to School
+            </Typography>
+            <Typography
+              color="#333333"
+              fontSize={"0.8125rem"}
+              sx={{ fontWeight: "600" }}
+            >
+              Gift Ideas
+            </Typography>
+            <Typography
+              color="#333333"
+              fontSize={"0.8125rem"}
+              sx={{ fontWeight: "600" }}
+            >
+              Clearances
+            </Typography>
+            <Typography
+              color="#333333"
+              fontSize={"0.8125rem"}
+              sx={{ fontWeight: "600" }}
+            >
+              Exclusive Releases
+            </Typography>
+          </div>
+        </div>
+      </Container>
     </AppBar>
   );
 }
