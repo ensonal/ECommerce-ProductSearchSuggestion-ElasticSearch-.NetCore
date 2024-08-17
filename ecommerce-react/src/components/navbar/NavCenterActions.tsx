@@ -17,7 +17,7 @@ export function NavCenterActions() {
           "--Input-focusedThickness": "0px",
           fontSize: "0.875rem",
         }}
-        placeholder="Search everything at ShopSphere"
+        placeholder="Search everything at Veloce"
         className="rounded-4"
         color="neutral"
         variant="outlined"
