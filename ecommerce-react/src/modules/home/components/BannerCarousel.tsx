@@ -56,6 +56,10 @@ export function BannerCarousel() {
             size="small"
             onClick={() => handleSelectImage(index)}
             sx={{
+              width: "2.5rem",
+              height: "0.5rem",
+              minWidth: "2.5rem",
+              minHeight: "0.5rem",
               backgroundColor:
                 index === activeImageIndex
                   ? "rgba(0, 0, 0, 0.5)"

@@ -38,7 +38,7 @@ export function ProductCarousel() {
           gutterBottom
           fontSize={"0.875rem"}
           fontWeight={600}
-          color={"#F91F35"}
+          color={"#E81E1E"}
           margin={0}
         >
           See all
